@@ -32,7 +32,11 @@ $routes->setAutoRoute(true);
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
-$routes->get('/', 'Home::index');
+$routes->get('/', 'Miniproyecto::index');
+$routes->get('/eliminar/(:any)' , 'Miniproyecto::eliminar/$1');
+$routes->get('/obtenerInformacion/(:any)' , 'Miniproyecto::obtenerDatos/$1');
+$routes->get('/actualizar' , 'Miniproyecto::actualizar');
+$routes->get('/crear' , 'Miniproyecto::insetar');
 
 /*
  * --------------------------------------------------------------------
